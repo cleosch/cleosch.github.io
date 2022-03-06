@@ -24,13 +24,14 @@ const view = new SceneView({
   qualityProfile: "high",
   camera: {
     position: [
-      168.83,
-      -44.94,
-      50000
+      169.03148337,
+      -45.06154658,
+      15161.47986
     ],
-    heading: 194.07,
-    tilt: 69.62
+    heading: 310.62,
+    tilt: 57.89
   },
+  
   environment: {
     atmosphere: { quality: "high" },
   },
