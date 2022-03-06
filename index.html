@@ -1,11 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <title>Coronet Loop visualization</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <p> PLS work dAMn</p>
+    <!-- Importing the webpage's stylesheet. The css resets any default browser settings  -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/css/main.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Importing the webpage's javascript file -->
+    <!-- Parsing: Analysing string into logical syntaxic components-->
+    <!-- Defer: A script that will be downloaded in parallel to parsing the page, and executed after the page has finished parsing-->
+    <script
+      defer
+      src="https://unpkg.com/es-module-shims@0.9.0/dist/es-module-shims.js"
+    ></script>
+
+    <!--Importing ArcGIS API for JavaScript module -->
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "esri/": "https://js.arcgis.com/4.19/@arcgis/core/"
+        }
+      }
+    </script>
+    
+    <!-- Importing the JavaScript program to the-->
+    <script src="./script.js" type="module-shim" defer></script>
+  </head>
+  
+  <!-- viewDiv is the element that displays the map-->
+  <body>
+    <div id="viewDiv"></div>
   </body>
 </html>
