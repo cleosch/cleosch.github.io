@@ -24,9 +24,9 @@ const view = new SceneView({
   qualityProfile: "high",
   camera: {
     position: [
-      8.61963097,
-      47.45510108,
-      8096.99619
+      168.83,
+      -44.94,
+      50000
     ],
     heading: 194.07,
     tilt: 69.62
