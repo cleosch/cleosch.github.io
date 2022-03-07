@@ -46,7 +46,7 @@ const view = new SceneView({
 const elevationProfile = new ElevationProfile({
   view,
   profiles: [
-    new ElevationProfileLineInput({ color: [245, 203, 66], title: "Bicycle track" }),
+    new ElevationProfileLineInput({ color: [212, 42, 56], title: "Coronet Loop" }),
   ],
   visibleElements: {
     selectButton: false,
@@ -75,7 +75,7 @@ view.ui.add(elevationProfile, "top-right");
   // add the bike track layer as a graphics layer - like a template
   const bikeTrackLayer = new GraphicsLayer({
     elevationInfo: {
-      mode: "relative-to-ground"
+      mode: "on-the-ground"
     },
     listMode: "hide"
   });
