@@ -31,7 +31,7 @@ const view = new SceneView({
     heading: 310.62,
     tilt: 57.89
   },
-  
+
   environment: {
     atmosphere: { quality: "high" },
   },
@@ -75,13 +75,9 @@ view.ui.add(elevationProfile, "top-right");
   // add the bike track layer
   const bikeTrackLayer = new GraphicsLayer({
     elevationInfo: {
-      mode: "relative-to-ground",
-      featureExpressionInfo: {
-        expression: "5"
-      }
+      mode: "relative-to-ground"
     },
-    listMode: "hide",
-    copyright: "Bicycle track provided by Hugo Campos"
+    listMode: "hide"
   });
 
   const bikeTrack = new Graphic({
