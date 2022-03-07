@@ -24,8 +24,8 @@ const view = new SceneView({
   qualityProfile: "high",
   camera: {
     position: [
-      169.03148337,
-      -45.06154658,
+      168.95148337,
+      -45.02154658,
       15161.47986
     ],
     heading: 310.62,
@@ -85,7 +85,7 @@ view.ui.add(elevationProfile, "top-right");
     geometry: geometry,
     symbol: new LineSymbol3D({
       symbolLayers: [new LineSymbol3DLayer({
-        material: { color: [245, 203, 66] },
+        material: { color: [212, 42, 56]},
         size: 3
       })]
     })
