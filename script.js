@@ -75,7 +75,7 @@ view.ui.add(elevationProfile, "top-right");
   // add the bike track layer
   const bikeTrackLayer = new GraphicsLayer({
     elevationInfo: {
-      mode: "relative-to-ground"
+      mode: "on-the-ground"
     },
     listMode: "hide"
   });
