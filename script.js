@@ -5,10 +5,9 @@ import { gpx } from "https://unpkg.com/@tmcw/togeojson?module";
 import EsriMap from "esri/Map.js";
 import SceneView from "esri/views/SceneView.js";
 import ElevationProfile from "esri/widgets/ElevationProfile.js";
-import LayerList from "esri/widgets/LayerList.js";
-import FeatureLayer from "esri/layers/FeatureLayer.js";
-import { LineSymbol3D, LineSymbol3DLayer, PointSymbol3D, IconSymbol3DLayer } from "esri/symbols.js";
-import { Polyline, Point } from "esri/geometry.js";
+import NavigationToggle from "esri/widgets/NavigationToggle.js";
+import { LineSymbol3D, LineSymbol3DLayer } from "esri/symbols.js";
+import Polyline from "esri/geometry.js";
 import ElevationProfileLineInput from "esri/widgets/ElevationProfile/ElevationProfileLineInput.js";
 import Graphic from "esri/Graphic.js";
 import GraphicsLayer from "esri/layers/GraphicsLayer.js";
@@ -57,12 +56,19 @@ const elevationProfile = new ElevationProfile({
 
 view.ui.add(elevationProfile, "top-right");
 
+// creates a new instance of the NavigationToggle widget
+let navigationToggle = new NavigationToggle({
+  view: view
+});
+
+// and adds it to the top right of the view
+view.ui.add(navigationToggle, "top-left");
+
 (async () => {
   // read the gpx file and convert it to geojson
   const response = await fetch("./cycling.gpx");
   const gpxcontent = await response.text();
   const geojson = gpx(new DOMParser().parseFromString(gpxcontent, "text/xml"));
-  const heartRates = geojson.features[0].properties.coordinateProperties.heart;
   const coordinates = geojson.features[0].geometry.coordinates;
 
   // add the track as an input for the ElevationProfile widget
