@@ -35,12 +35,16 @@ const view = new SceneView({
     atmosphere: { quality: "high" },
   },
   ui: {
-    components: ["navigation-toggle"],
+    components: ["attribution"],
   },
   popup: {
     defaultPopupTemplateEnabled: true
   }
 });
+
+
+view.ui.add(navigationToggle, "top-left");
+
 
 const elevationProfile = new ElevationProfile({
   view,
