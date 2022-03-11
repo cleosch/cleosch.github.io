@@ -35,7 +35,7 @@ const view = new SceneView({
     atmosphere: { quality: "high" },
   },
   ui: {
-    components: ["attribution"],
+    components: ["navigation-toggle"],
   },
   popup: {
     defaultPopupTemplateEnabled: true
@@ -55,14 +55,6 @@ const elevationProfile = new ElevationProfile({
 });
 
 view.ui.add(elevationProfile, "top-right");
-
-// creates a new instance of the NavigationToggle widget
-let navigationToggle = new NavigationToggle({
-  view: view
-});
-
-// and adds it to the top right of the view
-view.ui.add(navigationToggle, "top-left");
 
 (async () => {
   // read the gpx file and convert it to geojson
