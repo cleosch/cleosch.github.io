@@ -42,10 +42,6 @@ const view = new SceneView({
   }
 });
 
-
-view.ui.add(navigationToggle, "top-left");
-
-
 const elevationProfile = new ElevationProfile({
   view,
   profiles: [
