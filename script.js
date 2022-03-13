@@ -5,8 +5,6 @@ import { gpx } from "https://unpkg.com/@tmcw/togeojson?module";
 import EsriMap from "esri/Map.js";
 import SceneView from "esri/views/SceneView.js";
 import ElevationProfile from "esri/widgets/ElevationProfile.js";
-import LayerList from "esri/widgets/LayerList.js";
-import FeatureLayer from "esri/layers/FeatureLayer.js";
 import { LineSymbol3D, LineSymbol3DLayer, PointSymbol3D, IconSymbol3DLayer } from "esri/symbols.js";
 import { Polyline, Point } from "esri/geometry.js";
 import ElevationProfileLineInput from "esri/widgets/ElevationProfile/ElevationProfileLineInput.js";
