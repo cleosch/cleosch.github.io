@@ -24,12 +24,12 @@ const view = new SceneView({
   qualityProfile: "high",
   camera: {
     position: [
-      8.61963097,
-      47.45510108,
-      8096.99619
+      168.95148337,
+      -45.02154658,
+      15161.47986
     ],
-    heading: 194.07,
-    tilt: 69.62
+    heading: 310.62,
+    tilt: 57.89
   },
   environment: {
     atmosphere: { quality: "high" },
@@ -45,7 +45,7 @@ const view = new SceneView({
 const elevationProfile = new ElevationProfile({
   view,
   profiles: [
-    new ElevationProfileLineInput({ color: [245, 203, 66], title: "Bicycle track" }),
+    new ElevationProfileLineInput({ color: [212, 42, 56], title: "Coronet Loop" }),
   ],
   visibleElements: {
     selectButton: false,
@@ -70,28 +70,23 @@ view.ui.add(elevationProfile, "top-right");
   });
   elevationProfile.input = new Graphic({ geometry: geometry });
 
-  // add the bike track layer
+  // add the bike track layer as a graphics layer - like a template
   const bikeTrackLayer = new GraphicsLayer({
     elevationInfo: {
-      mode: "relative-to-ground",
-      featureExpressionInfo: {
-        expression: "5"
-      }
+      mode: "on-the-ground"
     },
-    listMode: "hide",
-    copyright: "Bicycle track provided by Hugo Campos"
+    listMode: "hide"
   });
 
   const bikeTrack = new Graphic({
     geometry: geometry,
     symbol: new LineSymbol3D({
       symbolLayers: [new LineSymbol3DLayer({
-        material: { color: [245, 203, 66] },
+        material: { color: [212, 42, 56] },
         size: 3
       })]
     })
   });
   bikeTrackLayer.add(bikeTrack);
   map.add(bikeTrackLayer);
-
 })();
