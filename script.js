@@ -5,7 +5,6 @@ import { gpx } from "https://unpkg.com/@tmcw/togeojson?module";
 import EsriMap from "esri/Map.js";
 import SceneView from "esri/views/SceneView.js";
 import ElevationProfile from "esri/widgets/ElevationProfile.js";
-import NavigationToggle from "esri/widgets/NavigationToggle.js";
 import { LineSymbol3D, LineSymbol3DLayer } from "esri/symbols.js";
 import Polyline from "esri/geometry.js";
 import ElevationProfileLineInput from "esri/widgets/ElevationProfile/ElevationProfileLineInput.js";
@@ -30,7 +29,6 @@ const view = new SceneView({
     heading: 310.62,
     tilt: 57.89
   },
-
   environment: {
     atmosphere: { quality: "high" },
   },
@@ -89,6 +87,6 @@ view.ui.add(elevationProfile, "top-right");
     })
   });
   bikeTrackLayer.add(bikeTrack);
-  
+
   map.add(bikeTrackLayer);
 })();
