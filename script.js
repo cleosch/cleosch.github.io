@@ -35,7 +35,7 @@ const view = new SceneView({
     atmosphere: { quality: "high" },
   },
   ui: {
-    components: ["attribution", "navigation-toggle"],
+    components: ["navigation-toggle"],
   },
   popup: {
     defaultPopupTemplateEnabled: true
@@ -61,7 +61,6 @@ view.ui.add(elevationProfile, "top-right");
   const response = await fetch("./cycling.gpx");
   const gpxcontent = await response.text();
   const geojson = gpx(new DOMParser().parseFromString(gpxcontent, "text/xml"));
-  const heartRates = geojson.features[0].properties.coordinateProperties.heart;
   const coordinates = geojson.features[0].geometry.coordinates;
 
   // add the track as an input for the ElevationProfile widget
