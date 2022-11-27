@@ -22,8 +22,8 @@ const view = new SceneView({
   qualityProfile: "high",
   camera: {
     position: [
-      168.95148337,
-      -45.02154658,
+      168.97377483,
+      -45.03730706,
       15161.47986
     ],
     heading: 310.62,
